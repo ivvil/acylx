@@ -39,9 +39,19 @@ body {
 			padding: 5%;
 			background-color: #67adb1;
 			clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+			& button {
+				background-color: #cfdfd8;
+				/* list-style-type: disc; */
+				margin-top: 0%;
+				border-style: none;
+				& a {
+					color: white;
+					text-decoration: none;
+				}
+			}
 			& ul {
 				display: flex;
-				margin-left: 10%;
+
 				flex-wrap: wrap;
 				list-style: none;
 				flex-grow: 1;
@@ -50,7 +60,6 @@ body {
 				& li {
 					width: 48%; /* Adjust as needed, considering margin and padding */
 					margin: 1%;
-					padding-left: 80%;
 					box-sizing: border-box;
 					padding: 10px;
 					text-align: center;
