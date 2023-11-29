@@ -1,3 +1,42 @@
+@use 'sass:math';
+
+$header-height: 185px;
+$simple-box-normal-width: 150px;
+$double-box-normal-width: 220px;
+
+@mixin simple-container($height: 300px, $width: 150px) {
+	height: $height;
+	width: $width;
+	padding: 5%;
+	background-color: #67adb1;
+	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+	& ul {
+		gap: 5px;
+		display: flex;
+		margin-left: 10%;
+		flex-wrap: wrap;
+		list-style: none;
+		flex-grow: 1;
+		padding: 0;
+		padding-right: 40px;
+		& li {
+			margin: 1%;
+			padding-left: 80%;
+			box-sizing: border-box;
+			padding: 10px;
+			text-align: center;
+			background-color: #cfdfd8;
+			/* list-style-type: disc; */
+			margin-top: 0%;
+			& a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+	@content;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,10 +44,10 @@ body {
 }
 
 .header-bar {
+	height: $header-height;
 	display: flex;
 	flex: auto;	
 	justify-content: center;
-	margin-left: 5%;
 	line-height: 30%;
 	& header {
 		text-align: left;
@@ -28,50 +67,29 @@ body {
 		}
 	}
 	& nav {
-		padding: 0.5rem;
+		padding: 1%;
 		padding-left: 1%;
 		padding-right: 10%;
 		background-color: #3f636b;
 		color: black;
 		font-family: "ChakraPetch Regular";
+		display: flex;
+		align-items: center;
 		line-height: 0%;
-		& div {
-			padding: 5%;
-			background-color: #67adb1;
-			clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-			& button {
-				background-color: #cfdfd8;
-				/* list-style-type: disc; */
-				margin-top: 0%;
-				border-style: none;
-				& a {
-					color: white;
-					text-decoration: none;
-				}
-			}
-			& ul {
-				display: flex;
-
-				flex-wrap: wrap;
-				list-style: none;
-				flex-grow: 1;
-				padding: 0;
-				padding-right: 40px;
-				& li {
-					width: 48%; /* Adjust as needed, considering margin and padding */
-					margin: 1%;
-					box-sizing: border-box;
-					padding: 10px;
-					text-align: center;
-					background-color: #cfdfd8;
-					/* list-style-type: disc; */
-					margin-top: 0%;
-					& a {
-						color: white;
-						text-decoration: none;
+		$header-padding: 60px;
+		.single-box {
+			@include simple-container($header-height - $header-padding) {
+				& ul {
+					& li {
+						& a {
+							width: 70;
+						}
 					}
 				}
 			}
+		}
+		.double-box {
+			@include simple-container($header-height - $header-padding, $double-box-normal-width)
 		}
 	}
 }

@@ -1,124 +1,161 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 .header-bar {
-	display: flex;
-	flex: auto;	
-	justify-content: center;
-	margin-left: 5%;
-	line-height: 30%;
-	& header {
-		text-align: left;
-		padding: 2rem;
-		background-color: #fda925;
-		padding-left: 5%;
-		padding-right: 5%;
-		color: #333;
-		& h1 {
-			font-family: "Corporation Games";
-		}
-		& h2 {
-			font-family: "ChakraPetch Regular";
-		}
-		& hr {
-			border-color: black;
-		}
-	}
-	& nav {
-		padding: 0.5rem;
-		padding-left: 1%;
-		padding-right: 10%;
-		background-color: #3f636b;
-		color: black;
-		font-family: "ChakraPetch Regular";
-		line-height: 0%;
-		& div {
-			padding: 5%;
-			background-color: #67adb1;
-			clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-			& ul {
-				display: flex;
-				margin-left: 10%;
-				flex-wrap: wrap;
-				list-style: none;
-				flex-grow: 1;
-				padding: 0;
-				padding-right: 40px;
-				& li {
-					width: 48%; /* Adjust as needed, considering margin and padding */
-					margin: 1%;
-					padding-left: 80%;
-					box-sizing: border-box;
-					padding: 10px;
-					text-align: center;
-					background-color: #cfdfd8;
-					/* list-style-type: disc; */
-					margin-top: 0%;
-					& a {
-						color: white;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-	}
+  height: 185px;
+  display: flex;
+  flex: auto;
+  justify-content: center;
+  line-height: 30%;
+}
+.header-bar header {
+  text-align: left;
+  padding: 2rem;
+  background-color: #fda925;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #333;
+}
+.header-bar header h1 {
+  font-family: "Corporation Games";
+}
+.header-bar header h2 {
+  font-family: "ChakraPetch Regular";
+}
+.header-bar header hr {
+  border-color: black;
+}
+.header-bar nav {
+  padding: 1%;
+  padding-left: 1%;
+  padding-right: 10%;
+  background-color: #3f636b;
+  color: black;
+  font-family: "ChakraPetch Regular";
+  display: flex;
+  align-items: center;
+  line-height: 0%;
+}
+.header-bar nav .single-box {
+  height: 125px;
+  width: 150px;
+  padding: 5%;
+  background-color: #67adb1;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+}
+.header-bar nav .single-box ul {
+  gap: 5px;
+  display: flex;
+  margin-left: 10%;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-grow: 1;
+  padding: 0;
+  padding-right: 40px;
+}
+.header-bar nav .single-box ul li {
+  margin: 1%;
+  padding-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background-color: #cfdfd8;
+  /* list-style-type: disc; */
+  margin-top: 0%;
+}
+.header-bar nav .single-box ul li a {
+  color: white;
+  text-decoration: none;
+}
+.header-bar nav .single-box ul li a {
+  width: 70;
+}
+.header-bar nav .double-box {
+  height: 125px;
+  width: 220px;
+  padding: 5%;
+  background-color: #67adb1;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+}
+.header-bar nav .double-box ul {
+  gap: 5px;
+  display: flex;
+  margin-left: 10%;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-grow: 1;
+  padding: 0;
+  padding-right: 40px;
+}
+.header-bar nav .double-box ul li {
+  margin: 1%;
+  padding-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background-color: #cfdfd8;
+  /* list-style-type: disc; */
+  margin-top: 0%;
+}
+.header-bar nav .double-box ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 .content {
-    z-index: 1; /* Bring content to the front */
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-	margin: 20%;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-	flex-direction: column;
-    height: 100vh;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Bring content to the front */
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-	z-index: -1;
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  z-index: -1;
 }
 
 .background-text {
-    writing-mode: vertical-rl; /* Vertical text from right to left */
-    /* transform: rotate(180deg); /\* Rotate to make it read from top to bottom *\/ */
-    color: #ccc; /* Adjust text color as needed */
-    font-size: 150px; /* Adjust font size as needed */
-    position: absolute;
-    z-index: -1; /* Move it behind the content */
-	top: 1%;
-	left: 0%;
-	font-family: "Starbirl";
-	white-space: nowrap;
+  writing-mode: vertical-rl; /* Vertical text from right to left */
+  /* transform: rotate(180deg); /\* Rotate to make it read from top to bottom *\/ */
+  color: #ccc; /* Adjust text color as needed */
+  font-size: 150px; /* Adjust font size as needed */
+  position: absolute;
+  z-index: -1; /* Move it behind the content */
+  top: 1%;
+  left: 0%;
+  font-family: "Starbirl";
+  white-space: nowrap;
 }
 
 @font-face {
-	font-family: "Starbirl";
-	src: url(assets/fonts/Starbirl.otf);
+  font-family: "Starbirl";
+  src: url(assets/fonts/Starbirl.otf);
+}
+@font-face {
+  font-family: "Corporation Games";
+  src: url(assets/fonts/Corporation\ Games.otf);
+}
+@font-face {
+  font-family: "Corporation Games Straight";
+  src: url(assets/fonts/Corporation\ Games\ Straight.otf);
+}
+@font-face {
+  font-family: "ChakraPetch Regular";
+  src: url(assets/fonts/ChakraPetch-Regular.ttf);
 }
 
-@font-face {
-	font-family: "Corporation Games";
-	src: url(assets/fonts/Corporation\ Games.otf);
-}
-
-@font-face {
-	font-family: "Corporation Games Straight";
-	src: url(assets/fonts/Corporation\ Games\ Straight.otf);
-}
-
-@font-face {
-	font-family: "ChakraPetch Regular";
-	src: url(assets/fonts/ChakraPetch-Regular.ttf);
-}
+/*# sourceMappingURL=styles.css.map */
