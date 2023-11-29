@@ -10,13 +10,16 @@ $double-box-normal-width: 220px;
 	padding: 5%;
 	background-color: #67adb1;
 	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+	@content;
+}
+
+@mixin link-list($colums, $rows) {
 	& ul {
 		gap: 5px;
-		display: flex;
+		display: grid;
 		margin-left: 10%;
-		flex-wrap: wrap;
 		list-style: none;
-		flex-grow: 1;
+		justify-items: start;
 		padding: 0;
 		padding-right: 40px;
 		& li {
@@ -25,16 +28,14 @@ $double-box-normal-width: 220px;
 			box-sizing: border-box;
 			padding: 10px;
 			text-align: center;
-			background-color: #cfdfd8;
-			/* list-style-type: disc; */
 			margin-top: 0%;
-			& a {
-				color: white;
+			& button {
+				background-color: #cfdfd8;
 				text-decoration: none;
+				border: none;
 			}
-		}
+		};
 	}
-	@content;
 }
 
 body {
@@ -78,15 +79,8 @@ body {
 		line-height: 0%;
 		$header-padding: 60px;
 		.single-box {
-			@include simple-container($header-height - $header-padding) {
-				& ul {
-					& li {
-						& a {
-							width: 70;
-						}
-					}
-				}
-			}
+			@include simple-container($header-height - $header-padding);
+			@include link-list(50px,30px);
 		}
 		.double-box {
 			@include simple-container($header-height - $header-padding, $double-box-normal-width)
