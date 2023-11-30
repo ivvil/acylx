@@ -13,29 +13,29 @@ $double-box-normal-width: 220px;
 	@content;
 }
 
-@mixin link-list($colums, $rows) {
-	& ul {
-		gap: 5px;
-		display: grid;
-		margin-left: 10%;
-		list-style: none;
-		justify-items: start;
-		padding: 0;
-		padding-right: 40px;
-		& li {
-			margin: 1%;
-			padding-left: 80%;
-			box-sizing: border-box;
-			padding: 10px;
-			text-align: center;
-			margin-top: 0%;
-			& button {
-				background-color: #cfdfd8;
-				text-decoration: none;
-				border: none;
+@mixin link-list($height: 20px, $width: 75px) {
+	$margin: 5px;
+	$small-box-width : math.div($width, 2) - $margin;
+	.container {
+		width: $width;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		.box {
+			height: 50px;
+			background-color: blue;
+			margin: 5px;
+			border-radius: 5px;
+			flex-basis: $width;
+			&:nth-child(3), &:nth-child(4) {
+				$width: $width * 2;
+				flex-basis: $small-box-width;
+				flex-grow: 1;
 			}
-		};
+		}
 	}
+
 }
 
 body {
@@ -80,10 +80,11 @@ body {
 		$header-padding: 60px;
 		.single-box {
 			@include simple-container($header-height - $header-padding);
-			@include link-list(50px,30px);
+			@include link-list();
 		}
 		.double-box {
-			@include simple-container($header-height - $header-padding, $double-box-normal-width)
+			@include simple-container($header-height - $header-padding, $double-box-normal-width);
+			@include link-list();
 		}
 	}
 }
