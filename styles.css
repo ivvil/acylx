@@ -101,6 +101,7 @@ body {
 }
 
 .content {
+  display: flex;
   z-index: 1; /* Bring content to the front */
   position: relative;
   background-color: white;
@@ -115,25 +116,36 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
+.abme-preview {
+  padding: 20px;
+  margin: 20%;
+  margin-top: 5%;
+  background-color: #3f636b;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  background-color: #e6ebe4;
+}
+.bg footer {
   text-align: center;
   padding: 1rem;
   background-color: #333;
   color: #fff;
-  z-index: -1;
 }
-
-.background-text {
+.bg .background-text {
   writing-mode: vertical-rl; /* Vertical text from right to left */
   /* transform: rotate(180deg); /\* Rotate to make it read from top to bottom *\/ */
   color: #ccc; /* Adjust text color as needed */
   font-size: 150px; /* Adjust font size as needed */
   position: absolute;
-  z-index: -1; /* Move it behind the content */
   top: 1%;
   left: 0%;
   font-family: "Starbirl";
   white-space: nowrap;
+  flex: 1;
 }
 
 @font-face {
