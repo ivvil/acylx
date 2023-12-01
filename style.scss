@@ -1,5 +1,8 @@
 @use 'sass:math';
 
+// TODO:
+// + Make nav responsive
+
 $header-height: 185px;
 $simple-box-normal-width: 150px;
 $double-box-normal-width: 220px;
@@ -68,57 +71,105 @@ body {
 		}
 	}
 	& nav {
+		padding-left: 2%;
 		padding: 1%;
-		padding-left: 1%;
-		padding-right: 10%;
+		padding-right: 4%;
 		background-color: #3f636b;
 		color: black;
 		font-family: "ChakraPetch Regular";
 		display: flex;
 		align-items: center;
+		gap: 5%;
 		line-height: 0%;
 		$header-padding: 60px;
 		.single-box {
 			@include simple-container($header-height - $header-padding);
-			@include link-list();
+			// @include link-list();
+			.container {
+				padding-top: 17px;
+				padding-left: 32px;
+				padding-right: 10%;
+				width: 100px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: flex-start;
+				.box {
+					margin-bottom: 5%;
+					flex-basis: 200px;
+					& button {
+						width: 75px;
+						height: 20px;
+						background-color: #cfdfd8;
+						text-decoration: none;
+						border: none;
+						text-align: left;
+					}
+				}
+			}
 		}
 		.double-box {
+			// padding-right: 10%;
+			width: $double-box-normal-width;
 			@include simple-container($header-height - $header-padding, $double-box-normal-width);
-			@include link-list();
+			// @include link-list();
+			.container {
+				padding-top: 17px;
+				padding-left: 30px;
+				width: 150px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: flex-start;
+				.box {
+					margin-bottom: 5%;
+					margin-right: 10%;
+					flex-basis: 50px;
+					& button {
+						width: 50px;
+						height: 20px;
+						background-color: #cfdfd8;
+						text-decoration: none;
+						border: none;
+						text-align: left;
+					}
+				}
+			}
 		}
 	}
 }
 
+
 .content {
-    z-index: 1; /* Bring content to the front */
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+	z-index: 1; /* Bring content to the front */
+	position: relative;
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
 	margin: 20%;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 	flex-direction: column;
-    height: 100vh;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	height: 100vh;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
+	text-align: center;
+	padding: 1rem;
+	background-color: #333;
+	color: #fff;
 	z-index: -1;
 }
 
 .background-text {
-    writing-mode: vertical-rl; /* Vertical text from right to left */
-    /* transform: rotate(180deg); /\* Rotate to make it read from top to bottom *\/ */
-    color: #ccc; /* Adjust text color as needed */
-    font-size: 150px; /* Adjust font size as needed */
-    position: absolute;
-    z-index: -1; /* Move it behind the content */
+	writing-mode: vertical-rl; /* Vertical text from right to left */
+	/* transform: rotate(180deg); /\* Rotate to make it read from top to bottom *\/ */
+	color: #ccc; /* Adjust text color as needed */
+	font-size: 150px; /* Adjust font size as needed */
+	position: absolute;
+	z-index: -1; /* Move it behind the content */
 	top: 1%;
 	left: 0%;
 	font-family: "Starbirl";
