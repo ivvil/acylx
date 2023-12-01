@@ -29,14 +29,15 @@ body {
   border-color: black;
 }
 .header-bar nav {
+  padding-left: 2%;
   padding: 1%;
-  padding-left: 1%;
-  padding-right: 10%;
+  padding-right: 4%;
   background-color: #3f636b;
   color: black;
   font-family: "ChakraPetch Regular";
   display: flex;
   align-items: center;
+  gap: 5%;
   line-height: 0%;
 }
 .header-bar nav .single-box {
@@ -46,34 +47,57 @@ body {
   background-color: #67adb1;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
 }
-.header-bar nav .single-box ul {
-  gap: 5px;
-  display: grid;
-  margin-left: 10%;
-  list-style: none;
-  justify-items: start;
-  padding: 0;
-  padding-right: 40px;
+.header-bar nav .single-box .container {
+  padding-top: 17px;
+  padding-left: 32px;
+  padding-right: 10%;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
-.header-bar nav .single-box ul li {
-  margin: 1%;
-  padding-left: 80%;
-  box-sizing: border-box;
-  padding: 10px;
-  text-align: center;
-  margin-top: 0%;
+.header-bar nav .single-box .container .box {
+  margin-bottom: 5%;
+  flex-basis: 200px;
 }
-.header-bar nav .single-box ul li button {
+.header-bar nav .single-box .container .box button {
+  width: 75px;
+  height: 20px;
   background-color: #cfdfd8;
   text-decoration: none;
   border: none;
+  text-align: left;
 }
 .header-bar nav .double-box {
+  width: 220px;
   height: 125px;
   width: 220px;
   padding: 5%;
   background-color: #67adb1;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+}
+.header-bar nav .double-box .container {
+  padding-top: 17px;
+  padding-left: 30px;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.header-bar nav .double-box .container .box {
+  margin-bottom: 5%;
+  margin-right: 10%;
+  flex-basis: 50px;
+}
+.header-bar nav .double-box .container .box button {
+  width: 50px;
+  height: 20px;
+  background-color: #cfdfd8;
+  text-decoration: none;
+  border: none;
+  text-align: left;
 }
 
 .content {
