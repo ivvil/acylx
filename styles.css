@@ -29,9 +29,9 @@ body {
   border-color: black;
 }
 .header-bar nav {
-  padding-left: 2%;
+  padding-left: 8%;
   padding: 1%;
-  padding-right: 4%;
+  padding-right: 15%;
   background-color: #3f636b;
   color: black;
   font-family: "ChakraPetch Regular";
@@ -101,25 +101,59 @@ body {
 }
 
 .content {
-  display: flex;
   z-index: 1; /* Bring content to the front */
   position: relative;
   padding: 20px;
   border-radius: 8px;
   margin: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  background-color: white;
+  gap: 5% 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "title ." "content-meta content";
+}
+.content .content-meta {
+  margin-left: 15%;
+  padding: 10%;
+  color: white;
+  padding-top: 30%;
+  grid-area: content-meta;
+  background-color: #322918;
+  clip-path: polygon(0 15%, 40% 0, 100% 0, 100% 100%, 35% 100%, 0 90%);
+}
+.content .content-meta a {
+  color: white;
+  text-decoration: none;
+}
+.content .content-meta ul {
+  margin-top: 0;
+}
+.content .content {
+  padding: 10%;
+  gap: 0 0;
+  margin: 0;
+  grid-area: content;
+  background-color: #fd7e22;
+  clip-path: polygon(0 0, 80% 0, 80% 50px, 90% 100px, 85% 100px, 100% 100px, 100% 90%, 80% 100%, 0 100%);
+  border-radius: 0;
+  grid-template-columns: 50%; /* or 1fr */
+}
+.content .title {
+  padding-left: 10%;
+  margin-right: 20%;
+  background-color: #abd022;
+  grid-area: title;
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
 }
 
 .abme-preview {
   padding: 20px;
   margin: 20%;
+  margin-bottom: 10%;
   margin-top: 3%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   height: 40%;
   width: auto;
   background-color: #67adb1;
@@ -139,8 +173,7 @@ body {
   padding: 2%;
   margin-right: -3%;
   text-decoration: none;
-  clip-path: polygon(0% 30%, 30% 0%, 100% 0%, 100% 100%, 0% 100%);
-  background-color: #abd022;
+  background-color: #fda925;
 }
 
 .background-text {
