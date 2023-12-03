@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Iván's Blog</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.png"> <meta name="description" content="Blog de Iván Villagrasa Pérez. Compartiendo mi pasión por la música, programación, y más."> <meta name="keywords" content="Blog, Música, Programación, Fotografía, Electrónica, Ingeniería"> <meta name="author" content="Iván Villagrasa Pérez">
+	<meta charset="UTF-8">
+	<meta name="description" content="Iván's personal blog">
+	<meta name="author" content="Iván Villagrasa Pérez">
+	<meta name="keywords" content="Blog, music">
+	<style>
+		@font-face {
+			font-family: "Macro";
+			src: url("fonts/Macro___Free_font_by_autonomouse.ttf");
+		}
+
+		@font-face {
+			font-family: "InterTight";
+			src: url("fonts/InterTight-Bold.ttf");
+		}
+
+		@font-face {
+			font-family: "RedHatDisplay";
+			src: url("fonts/RedHatDisplay-Regular.ttf");
+		}
+
+		@font-face {
+			font-family: "Inter";
+			src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
+		}
+
+		.Title {
+			font-family: "InterTight";
+		}
+
+		.Text {
+			font-family: "RedHatDisplay";
+		}
+
+		.Marquee {
+			font-family: "Macro";
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="Title">Music Blog 🎧</h1>
+	<marquee class="Marquee">Iván's Music Blog</marquee>
+	<hr>
+
+	<div class="Text">
+		<h2>Feedback form</h2>
+		<form method="post" name="form" action="data.php">
+			<fieldset>
+				<legend>Your Information</legend>
+				<!-- Input user's name and surname -->
+				<label for="name">Name</label>
+				<input type="text" id="name" name="NameUser" maxlength="20"> &nbsp;
+				<label for="surname">Surname</label>
+				<input type="text" id="surname" name="SurnameUser" maxlength="40"><br>
+
+				<!-- Input user's birthdate -->
+				<label for="birthdate">Birthdate</label>
+				<input type="date" id="birthdate" name="BirthdateUser"><br>
+
+				<!-- Input user's email -->
+				<label for="email">Email</label>
+				<input type="email" id="email" name="EmailUser"><br>
+
+				<!-- Input user's favorite color -->
+				<label for="color">What is your favorite color?</label>
+				<input type="color" id="color" name="FavColorUser" value="#ffffff"><br>
+
+				<!-- Input user's profile picture -->
+				<label for="image">Add a profile picture</label>
+				<input type="image" id="image" name="ProfilePictureUser"><br>
+
+				<!-- Input user's devices -->
+				<label>Which operating systems do you use?</label><br>
+				<input type="checkbox" name="OsUser" value="OsWindows">Windows<br>
+				<input type="checkbox" name="OsUser" value="OsMacOs">Mac OS<br>
+				<input type="checkbox" name="OsUser" value="OsGNULinux">GNU/Linux<br>
+				<input type="checkbox" name="OsUser" value="OsGNUHurd">GNU Hurd<br>
+				<input type="checkbox" name="OsUser" value="OsBSD">BSD's<br>
+				<input type="checkbox" name="OsUser" value="OsHaiku">Haiku OS<br>
+				<input type="checkbox" name="OsUser" value="OsIOS">iOS<br>
+				<input type="checkbox" name="OsUser" value="OsAndroid">Android<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>About the Blog</legend>
+
+				<!-- Input the number of articles the user has read -->
+				<label for="articles">How many articles from this blog have you read?</label>
+				<input type="number" id="articles" name="NumArt"><br>
+
+				<!-- Input the user's favorite article -->
+				<label for="fav">What is your favorite article:</label>
+				<select id="fav" name="FavArtUser">
+					<option>Panchiko</option>
+					<option>Pixies</option>
+					<option>Other...</option>
+				</select><br>
+
+				<!-- Input how much does the user like the article -->
+				<label for="amount">On a scale from 1 to 10, how would you rate your favorite article?</label>
+				<label>1</label>
+				<input type="range" id="amount" name="FavArtileRating" min="1" max="10" list="values">
+				<label>10</label><br>
+				<!-- Values for the amount range -->
+				<datalist id="values">
+					<option value="1"></option>
+					<option value="2"></option>
+					<option value="3"></option>
+					<option value="4"></option>
+					<option value="5"></option>
+					<option value="6"></option>
+					<option value="7"></option>
+					<option value="8"></option>
+					<option value="9"></option>
+					<option value="10"></option>
+				</datalist>
+
+				<!-- Input more themes for the blog -->
+			
+
