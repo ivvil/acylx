@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+  <channel>
+	<title>shft.dev</title>
+	<link>https://www.shft.dev</link>
+	<description>Feed for my personal website.</description>
+	<image>
+      <url>https://www.shft.dev/assets/favicon.png</url>
+      <title>shft.dev</title>
+      <link>https://www.shft.dev</link>
+	</image>
+	<item>
+      <title>NixOS</title>
+      <link>https://www.shft.dev/programming#NixOS</link>
+      <description>Advantages of the NixOS linux distro</description>
+	</item>
+	<item>
+      <title>'(Lisp, the language of the '(past future))</title>
+      <link>https://www.shft.dev/programming#lisp</link>
+      <description>Exploration of the lisp programming language</description>
+	</item>
+	<item>
+      <title>About me</title>
+      <link>https://www.shft.dev/abme</link>
+      <description>Info about me</description>
+	</item>
+  </channel>
+
+</rss> 
