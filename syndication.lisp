@@ -27,8 +27,8 @@
 		:accessor url)
    (title :initarg :title
 		  :accessor title)
-   (link :initarg :link
-		 :accessor link)))
+   (description :initarg :description
+				:accessor description)))
 
 (defvar *acylx* (make-instance 'web :name "shft.dev" :link "https://www.shft.dev" :description "Feed de shft.dev"))
 
@@ -39,10 +39,17 @@
   (setq image (make-instance 'image :location "https://www.shft.dev/assets/favicon.png" :name "shft.dev" :link "https://www.shft.dev")))
 
 (defun create-rss-feed-item (obj)
-  )
+  `(cxml:with-element "item"
+	  (cxml:with-element "title"
+		(cxml:text ,(title obj)))
+	  (cxml:with-element "link"
+		(cxml:text ,(url obj)))
+	  (cxml:with-element "description"
+		(cxml:text ,(description obj)))))
 
 (defun get-rss-feed (obj)
-  (cxml:with-xml-output (cxml:make-octet-stream-sink stream :indentation 2 :canonical nil)
+  (with-output-to-string (stream)
+	(cxml:with-xml-output (cxml:make-character-stream-sink stream)
 	(cxml:with-element "rss"
 	  (cxml:attribute "version" "2.0")
 	  (cxml:with-element "channel"
@@ -51,4 +58,17 @@
 		(cxml:with-element "link"
 		  (cxml:text (link obj)))
 		(cxml:with-element "description"
-		  (cxml:text (description obj)))))))
+		  (cxml:text (description obj)))
+		(cxml:with-element "image"
+		  (cxml:with-element "url"
+			(cxml:text (location (image obj))))
+		  (cxml:with-element "title"
+			(cxml:text (name (image obj))))
+		  (cxml:with-element "link"
+			(cxml:text (link (image obj)))))
+		(loop for items in (item ))))))
+
+(defmacro with-xml-sintax (&body body)
+  `(with-output-to-string (stream)
+	 (cxml:with-xml-output (cxml:make-character-stream-sink stream)
+	   ,@body)))
