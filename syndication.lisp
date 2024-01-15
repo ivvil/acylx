@@ -12,7 +12,8 @@
    (generator :initform "Common Lisp syndication generator")
    (build-date :initform (local-time:universal-to-timestamp (get-universal-time)) :allocation :class :reader build-date)
    (publication-date :accessor publication-date :initform (local-time:universal-to-timestamp (get-universal-time)))
-   category language author copyright docs image))
+   (image :accessor image)
+   category language author copyright docs))
 
 (defclass image ()
   ((location :initarg :location
@@ -32,11 +33,12 @@
 
 (defvar *acylx* (make-instance 'web :name "shft.dev" :link "https://www.shft.dev" :description "Feed de shft.dev"))
 
-(with-slots (category language author copyright docs image) *acylx*
+(with-slots (category language author copyright docs image item) *acylx*
   (setq category "Tecnologia")
   (setq language "en-us")
   (setq author "ivvil412@gmail.com")
-  (setq image (make-instance 'image :location "https://www.shft.dev/assets/favicon.png" :name "shft.dev" :link "https://www.shft.dev")))
+  (setq image (make-instance 'image :location "https://www.shft.dev/assets/favicon.png" :name "shft.dev" :link "https://www.shft.dev"))
+  (setq item `(,(make-instance 'item :url "https://www.shft.dev/programming#NixOS" :title "NixOS" :description "Advantages of the NixOS linux distro") m(make-instance 'item :url "https://www.shft.dev/programming#lisp" :title "'(Lisp, the language of the '(past future))" :description "Exploration of the lisp programming language") ,(make-instance 'item :url "https://www.shft.dev/abme" :title "About me" :description "Info about me"))))
 
 (defun create-rss-feed-item (obj)
   `(cxml:with-element "item"
@@ -66,7 +68,8 @@
 			(cxml:text (name (image obj))))
 		  (cxml:with-element "link"
 			(cxml:text (link (image obj)))))
-		(loop for items in (item ))))))
+		;; (loop for items in (item obj) collect (create-rss-feed-item obj))
+		)))))
 
 (defmacro with-xml-sintax (&body body)
   `(with-output-to-string (stream)
