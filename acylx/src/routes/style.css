@@ -1,0 +1,45 @@
+:root {
+  --color-blue-300: #e6ebe4;
+  --color-blue-400: #cfdfd8;
+  --color-blue-500: #67adb1;
+  --color-blue-700: #3f636b;
+  --color-orange-500: #fda925;
+  --color-orange-700: #fd7e22;
+  --color-brown-500: #322918;
+  --color-green-500: #abd022;
+  --color-neutral-800: #333;
+  --color-neutral-400: #ccc;
+
+  --font--main: "ChakraPetch Regular", "Inter", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Starbirl";
+  src: url(/assets/fonts/Starbirl.otf);
+}
+
+@font-face {
+  font-family: "Corporation Games";
+  src: url(/assets/fonts/Corporation\ Games.otf);
+}
+
+@font-face {
+  font-family: "Corporation Games Straight";
+  src: url(/assets/fonts/Corporation\ Games\ Straight.otf);
+}
+
+@font-face {
+  font-family: "ChakraPetch Regular";
+  src: url(/assets/fonts/ChakraPetch-Regular.ttf);
+}
+
+body {
+  font-family: var(--font--main);
+  margin: 0;
+  background-color: var(--color-blue-300);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
