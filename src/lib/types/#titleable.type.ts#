@@ -1,0 +1,7 @@
+import type { Snippet } from "svelte";
+
+export class Titleable implements Snippet {
+  title: string
+
+  constructor(title: string)
+}

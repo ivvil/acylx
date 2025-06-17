@@ -1,0 +1,44 @@
+import type { Post } from "$lib/types/Post.type";
+import { render } from "svelte/server";
+
+
+export class Blog {
+	public static async getPosts(): Promise<Array<Post>> {
+		let paths = import.meta.glob('/src/blog/*.md', { eager: true });
+		let posts: Array<Post> = [];
+
+		for (const path in paths) {
+			const file = paths[path];
+			const slug = path.split("/").at(-1)?.replace('.md', '');
+
+			if (file && typeof file === 'object' && 'metadata' in file && slug) {
+				console.log("sigma: ", await this.extractPreview(render(file.default).body));
+				const metadata = file.metadata as Omit<Post, 'slug'>;
+				const post = { ...metadata, slug } satisfies Post;
+				posts.push(post);
+			}
+
+		}
+
+		// Convert and sort dates
+		posts = posts.sort((a, b) => {
+			// Convert dd/mm/yyyy to yyyy-mm-dd for proper parsing
+			const convertDate = (dateStr: string) => {
+				const [day, month, year] = dateStr.split('/');
+				return new Date(`${year}-${month}-${day}`);
+			};
+
+			return convertDate(b.date).getTime() - convertDate(a.date).getTime();
+		});
+
+		return posts;
+	}
+
+	static async extractPreview(html: string) {
+		const $ = cheerio.load(html);
+		const paragraphs = $('p').slice(0, 2);
+		return $.html(paragraphs);
+	}
+
+	public static defaultCategories = ["Programming", "Music", "Photography"];
+}
