@@ -21,4 +21,8 @@
 		background-color: var(--color-green-500);
 		clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
 	}
+
+	@media (max-width: 601px) {
+	  
+	}
 </style>

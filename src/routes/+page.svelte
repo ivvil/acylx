@@ -59,6 +59,7 @@
 			<Title>
 				<h2>::Feed.</h2>
 			</Title>
+			<div class="sections">Categories -></div>
 		</div>
 
 		<SidebarPanel>
@@ -71,13 +72,16 @@
 				</ul>
 			{/snippet}
 
-			{#each postSnippets as snippet}
+			{#each postSnippets as snippet, i}
 				<PostGrid>
 					<a href="blog/{snippet.slug}"><h2>{snippet.title}</h2></a>
 					<br />
 					{#each snippet.rendered as rendered}
 						{@render rendered?.()}
-					{/each}
+					  {/each}
+					  <!-- {#if postSnippets.length > i + 1} -->
+					  <!-- 	<hr> -->
+					  <!-- {/if} -->
 				</PostGrid>
 			{/each}
 		</SidebarPanel>
@@ -86,6 +90,26 @@
 
 <style>
 	.title {
+		display: flex;
 		margin-bottom: 3%;
+		.sections {
+			display: none;
+		}
+	}
+
+	@media (max-width: 601px) {
+		.title {
+			margin: 0;
+			background-color: var(--color-brown-500);
+			.sections {
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  color: white;
+			  flex-grow: 2;
+			  /* font-weight: 700; */
+			  font-size: 24px;
+			}
+		}
 	}
 </style>

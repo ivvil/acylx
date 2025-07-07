@@ -25,4 +25,10 @@
 			'title .'
 			'content-meta content';
 	}
+
+	@media (max-width: 601px) {
+	  div {
+		display: block;
+	  }
+	}
 </style>

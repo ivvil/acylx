@@ -21,4 +21,13 @@
 		margin-top: 5%;
 		background-color: white;
 	}
+
+	@media (max-width: 601px) {
+	  .content {
+		margin: 0;
+		/* background-color: transparent; */
+		border-radius: 0;
+		padding: 0;
+	  }
+	}
 </style>

@@ -17,6 +17,7 @@
 		{@render title()}
 	{/if}
 	<div class="content">{@render children()}</div>
+	<hr />
 	<div class="link">{@render link()}</div>
 </div>
 
@@ -42,6 +43,27 @@
 	}
 
 	.link {
-		text-align: right;
+	  text-align: right;
+	}
+
+	hr {
+	  display: none;
+	  border-color: var(--color-neutral-800);
+	}
+
+	@media (max-width: 601px) {
+	  .longcard {
+		/* padding: 0; */
+		margin: 0;
+		clip-path: none;
+	  }
+
+	  hr {
+		display: block;
+	  }
+
+	  .link {
+		margin-top: 10%;
+	  }
 	}
 </style>

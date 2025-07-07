@@ -20,8 +20,8 @@
 	.background-text {
 		writing-mode: vertical-rl;
 		color: var(--color-neutral-400);
-		font-size: 150px;
-		position: absolute;
+		font-size: 7vh;
+		position: fixed;
 		top: 1%;
 		z-index: -1;
 		left: 0%;

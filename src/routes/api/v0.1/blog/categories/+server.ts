@@ -1,5 +1,6 @@
 
-import { Blog } from "../../../../../../../../../.emacs.d/cache/backups/!home!ivvil!Proyectos!acylx!acylx!src!lib!services!blog.ts~";
+
+import { Blog } from "$lib/services/blog";
 import { json } from "@sveltejs/kit";
 
 export async function GET() {

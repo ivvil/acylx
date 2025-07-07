@@ -61,4 +61,19 @@
 			0 100%
 		);
 	}
+	
+	@media (max-width: 601px) {
+	  .sidebar-pannel {
+		grid-template-columns: none;
+	  }
+	  
+	  .sidebar {
+		display: none;
+	  }
+
+	  .main {
+		clip-path: none;
+		padding: 5%;
+	  }
+	}
 </style>
