@@ -23,6 +23,9 @@
 	}
 
 	@media (max-width: 601px) {
-	  
+		.title {
+			padding-left: 5%;
+			padding-right: 15%;
+		}
 	}
 </style>
