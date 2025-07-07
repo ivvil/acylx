@@ -3,6 +3,8 @@
 	import HeaderBar from '$lib/HeaderBar.svelte';
 	import './style.css';
 
+	export const prerender = true;
+
 	interface Props {
 		children: Snippet;
 	}
