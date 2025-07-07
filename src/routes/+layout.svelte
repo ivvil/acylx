@@ -27,6 +27,5 @@
 		left: 0%;
 		font-family: 'Starbirl';
 		white-space: nowrap;
-		/* TODO: Figure out how to make it visible without having size */
 	}
 </style>
