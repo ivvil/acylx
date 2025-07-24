@@ -1,4 +1,5 @@
 <script>
+	export const prerender = true;
 	import { page } from '$app/state';
 
 	import { Content, Title } from '$lib/components';

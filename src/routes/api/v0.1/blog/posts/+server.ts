@@ -8,3 +8,5 @@ export async function GET() {
 	return json(posts);
 
 }
+
+export const prerender = true;

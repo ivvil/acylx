@@ -16,3 +16,5 @@ export async function GET() {
   
   return json(uniqueCategories);
 }
+
+export const prerender = true;

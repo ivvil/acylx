@@ -7,6 +7,8 @@
 
 	let categories = Blog.defaultCategories;
 
+	export const prerender = true;
+
 	interface Data {
 		categories: Array<string>;
 		posts: Array<Post>;
@@ -78,10 +80,10 @@
 					<br />
 					{#each snippet.rendered as rendered}
 						{@render rendered?.()}
-					  {/each}
-					  <!-- {#if postSnippets.length > i + 1} -->
-					  <!-- 	<hr> -->
-					  <!-- {/if} -->
+					{/each}
+					<!-- {#if postSnippets.length > i + 1} -->
+					<!-- 	<hr> -->
+					<!-- {/if} -->
 				</PostGrid>
 			{/each}
 		</SidebarPanel>
@@ -102,13 +104,13 @@
 			margin: 0;
 			background-color: var(--color-brown-500);
 			.sections {
-			  display: flex;
-			  justify-content: center;
-			  align-items: center;
-			  color: white;
-			  flex-grow: 2;
-			  /* font-weight: 700; */
-			  font-size: 24px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				flex-grow: 2;
+				/* font-weight: 700; */
+				font-size: 24px;
 			}
 		}
 	}

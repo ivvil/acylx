@@ -1,5 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
+
+	export const prerender = true;
 </script>
 
 <svelte:head>
@@ -9,7 +11,6 @@
 </svelte:head>
 
 <article>
-  
 	<hgroup>
 		<h1>{data.meta.title}</h1>
 		<p>{data.meta.date}</p>

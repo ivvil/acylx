@@ -1,5 +1,6 @@
 import type { Post } from "$lib/types/Post.type";
 
+export const prerender = true;
 
 let apiVer = "0.1";
 
