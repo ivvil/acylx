@@ -69,14 +69,14 @@
 				<p>Categories</p>
 				<ul>
 					{#each categories as category}
-						<li><a href="/blog?category={category}">{category}</a></li>
+						<li><a href="/blog?category={category}/index.html">{category}</a></li>
 					{/each}
 				</ul>
 			{/snippet}
 
 			{#each postSnippets as snippet, i}
 				<PostGrid>
-					<a href="blog/{snippet.slug}"><h2>{snippet.title}</h2></a>
+					<a href="blog/{snippet.slug}/index.html"><h2>{snippet.title}</h2></a>
 					<br />
 					{#each snippet.rendered as rendered}
 						{@render rendered?.()}

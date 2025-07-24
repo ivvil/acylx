@@ -14,7 +14,7 @@
 
 <header>
 	<div class="title">
-		<a href="#">
+		<a href="index.html">
 			<h1>SHFT.dev</h1>
 		</a>
 		<h2>A shft into a more open future</h2>
