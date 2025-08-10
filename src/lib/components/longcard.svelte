@@ -25,7 +25,7 @@
 	.longcard {
 		padding: 20px;
 		margin: 20%;
-		margin-bottom: 10%;
+		margin-bottom: 3%;
 		margin-top: 3%;
 		background-color: var(--color-blue-500);
 		clip-path: polygon(0% 0%, 15% 0%, 20% 23%, 100% 23%, 100% 100%, 0% 100%);
