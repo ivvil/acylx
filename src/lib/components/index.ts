@@ -7,5 +7,6 @@ export { default as SidebarPanel } from './sidebarpanel.svelte'
 export { default as Title } from './title.svelte'
 export { default as Content } from './content.svelte'
 export { default as PostGrid } from './postgrid.svelte'
+export { default as Marquee } from './marquee.svelte'
 
 

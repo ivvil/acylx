@@ -24,7 +24,7 @@
 		display: flex;
 		align-items: stretch;
 		justify-content: center;
+		flex-direction: column;
 		width: 100vw;
-		height: 100vh;
 	}
 </style>

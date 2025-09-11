@@ -1,4 +1,7 @@
 <script>
+	import Canti from '$lib/canti.svelte';
+import Marquee from '$lib/components/marquee.svelte';
+	import { magician } from '$lib/magician';
 	import { Canvas, T } from '@threlte/core';
 	import { useGltf } from '@threlte/extras';
 	import { PerspectiveCamera } from 'three';
@@ -17,7 +20,7 @@
 			<hr />
 		</div>
 		<div style:grid-area="extra" style:justify-self="start" style:align-self="start">
-			<p>Web developer</p>
+			<p>Software developer</p>
 		</div>
 		<div style:grid-area="fun" style:justify-self="start" style:align-self="start">
 			<div class="bg-box">
@@ -30,13 +33,16 @@
 						}}
 					/>
 					<T.DirectionalLight position={[0, 10, 10]} />
-					{#await useGltf('/assets/models/canti.glb') then gltf}
-						<T is={gltf.scene}  />
-					{/await}
+					<Canti />
 				</Canvas>
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="content" id="art1" style:background-color="#37e5e5">
+  Hi
+  <Marquee text={magician} />
 </div>
 
 <style>
@@ -45,7 +51,7 @@
 		padding: 2%;
 		background-color: var(--color-orange-700);
 		width: 90%;
-		height: 90%;
+		height: 85vh;
 		border-radius: 15px;
 		border-bottom-right-radius: 0;
 	}
