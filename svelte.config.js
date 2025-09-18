@@ -13,9 +13,6 @@ const config = {
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOpts)],
 	kit: {
 		adapter: adapter(),
-		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
 	},
 	extensions: ['.svelte', '.svx', '.md']
 };
