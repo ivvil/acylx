@@ -76,7 +76,7 @@
 
 			{#each postSnippets as snippet, i}
 				<PostGrid>
-					<a href="blog/{snippet.slug}/index.html"><h2>{snippet.title}</h2></a>
+					<a href="blog/{snippet.slug}"><h2>{snippet.title}</h2></a>
 					<br />
 					{#each snippet.rendered as rendered}
 						{@render rendered?.()}

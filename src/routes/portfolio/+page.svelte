@@ -1,6 +1,6 @@
 <script>
 	import Canti from '$lib/canti.svelte';
-import Marquee from '$lib/components/marquee.svelte';
+	import Marquee from '$lib/components/marquee.svelte';
 	import { magician } from '$lib/magician';
 	import { Canvas, T } from '@threlte/core';
 	import { useGltf } from '@threlte/extras';
@@ -41,8 +41,7 @@ import Marquee from '$lib/components/marquee.svelte';
 </div>
 
 <div class="content" id="art1" style:background-color="#37e5e5">
-  Hi
-  <Marquee text={magician} />
+	<div class="magician"><Marquee text={magician} /></div>
 </div>
 
 <style>
@@ -87,5 +86,15 @@ import Marquee from '$lib/components/marquee.svelte';
 		background-color: white;
 		border-radius: 15px;
 		border-top-left-radius: 0;
+	}
+
+	.magician {
+		height: 100%;
+		width: 5%;
+		font-family: 'TwoDown,OnetoGo Regular';
+		font-size: xx-large;
+		font-weight: bold;
+		color: pink;
+		z-index: 1;
 	}
 </style>

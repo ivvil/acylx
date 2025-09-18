@@ -33,6 +33,11 @@
   src: url(/assets/fonts/ChakraPetch-Regular.ttf);
 }
 
+@font-face {
+  font-family: "TwoDown,OnetoGo Regular";
+  src: url(/assets/fonts/TwoDown-OnetoGo-Regular.ttf);
+}
+
 body {
   font-family: var(--font--main);
   margin: 0;

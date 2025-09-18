@@ -30,14 +30,11 @@
 	let animationStyle = $derived(
 		direction == MarqueeDirection.Up ? `scroll-up linear infinite` : `scroll-down linear infinite`
 	);
-
-	console.log(animationStyle);
 </script>
 
 <div class="marquee-container">
 	<div class="marquee-content">
 		{#each text as letter}
-			{$inspect(letter)}
 			<div>{letter}</div>
 			<br />
 		{/each}
@@ -48,6 +45,7 @@
 	.marquee-container {
 		overflow: hidden;
 		width: 100%;
+		height: 100%;
 	}
 
 	.marquee-content {
@@ -55,7 +53,7 @@
 		line-height: 8px;
 		height: 100%;
 		text-align: center;
-		animation: scroll-up 80s linear infinite;
+		animation: scroll-up 10s linear infinite;
 	}
 
 	.marquee-content.paused {
