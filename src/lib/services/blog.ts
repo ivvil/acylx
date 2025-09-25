@@ -12,7 +12,7 @@ export class Blog {
 			const file = paths[path];
 			const slug = path.split("/").at(-1)?.replace('.md', '');
 
-			if (file && typeof file === 'object' && 'metadata' in file && slug) {
+			if (file && typeof file === 'object' && 'metadata' in file && slug && !file.metadata.draft) {
 				// Render component to HTML
 				const { body } = render(file.default);
 
