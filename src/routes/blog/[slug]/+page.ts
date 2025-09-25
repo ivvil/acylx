@@ -4,10 +4,6 @@ export async function load({ params }) {
 	try {
 	  const post = await import(`../../../blog/${params.slug}.md`);
 
-	  if (!post.metadata.draft) {
-		throw new Error();
-	  }
-
 	  return {
 		content: post.default,
 		meta: post.metadata,
