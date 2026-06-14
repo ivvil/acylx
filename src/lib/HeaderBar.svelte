@@ -17,7 +17,7 @@
 		<a href="/">
 			<h1>SHFT.dev</h1>
 		</a>
-		<h2>A shft into a more open future</h2>
+		<h2>A SHFT into a more open future</h2>
 		<hr />
 	</div>
 
@@ -28,6 +28,11 @@
 				<Linklist>
 					<Link href="#">Hi</Link>
 				</Linklist>
+			</Card>
+			<Card title="::MyLinks">
+			  <Linklist>
+				<Link href="https://github.com/ivvil">GitHub</Link>
+			  </Linklist>
 			</Card>
 		</div>
 	</nav>
@@ -77,9 +82,11 @@
 		.cards {
 			display: grid;
 			align-items: stretch;
-			gap: 5%;
 			line-height: 0%;
 			height: 100%;
+			grid-auto-flow: column;
+			column-gap: 10%;
+			row-gap: 5%;
 		}
 
 		.nav-open {

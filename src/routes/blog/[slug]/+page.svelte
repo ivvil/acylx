@@ -11,18 +11,20 @@
 </svelte:head>
 
 <article>
+	<h2>{data.meta.title}</h2>
+	<p>{data.meta.date}</p>
+
 	<hgroup>
-		<h1>{data.meta.title}</h1>
-		<p>{data.meta.date}</p>
+		<div class="tags">
+			{'{'}
+			{#each data.meta.categories as category}
+				<span class="tag">{category}</span>
+			{/each}
+			{'}'}
+		</div>
+
+		<div class="main-content">
+			{@render data.content?.()}
+		</div>
 	</hgroup>
-
-	<div class="tags">
-		{#each data.meta.categories as category}
-			<span class="tag">{category}</span>
-		{/each}
-	</div>
-
-	<div class="main-content">
-		{@render data.content?.()}
-	</div>
 </article>

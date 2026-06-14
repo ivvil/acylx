@@ -1,0 +1,54 @@
+#+TODO: TODO PROG REVW BLOK | DONE
+
+#+BEGIN: clocktable :scope file :maxlevel 2
+#+CAPTION: Clock summary at [2025-10-01 Wed 15:03]
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+
+* Styles
+
+** TODO Responsiveness
+
+Mainpage styles don't manage well ultrawide and landscape. Maybe use the phone layout for landscape.
+
+** TODO Make styles for article pages 
+
+Current article view pages have no styling for the article text.
+
+* TODO Portfolio
+
+** TODO Add projects
+
+Maybe even finish some of them
+
+** TODO Implement stepped scrolling for each frame
+
+* TODO About me page
+
+* TODO Lies page
+
+A page full of lies with lies of the year, month, day, hour, minute and second
+
+* TODO Image gallery
+
+Somewhere to put my photos
+
+* TODO LLM Torture studio
+
+Make an llm with the ability to fuck with it's internals while it's running.
+
+* TODO Propaganda page
+
+Some digital art
+
+* TODO Cyberia
+
+Game that runs in the browser
+
+* TODO Blog
+
+** Articles 
+
+*** TODO Finish rewrite article

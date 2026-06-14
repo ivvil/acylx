@@ -23,6 +23,4 @@ Unironically I like the svelte syntax so that was really a plus, it isn't that h
 
 ### Prerendered routes
 
-A good example of how SvelteKit 
-
-I've been using prerendered routes for this blog, if you go to [/api/v0.1/blog/posts](/api/v0.1/blog/posts) you'll see the prerendered JSON API for the blog preview, used in the main page for the post display.
+A good example of the magic of SvelteKit is route prerendering; I'm using them for this blog, if you go to [/api/v0.1/blog/posts](/api/v0.1/blog/posts) you'll see the prerendered JSON API for the blog preview, used in the main page for the post display. This is a static site, the JSON is built at compile time and exists as a file in the built site.

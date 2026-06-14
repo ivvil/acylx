@@ -16,8 +16,8 @@
 			<p class="title">{title}</p>
 		{:else}
 			{@render title()}
-		{/if}</a
-	>
+		{/if}
+	</a>
 
 	<br />
 
